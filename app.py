@@ -3071,4 +3071,7 @@ def debug_dogfacenet_preservation(animal_data, stage="unknown"):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5001, debug=True)
+    # Use PORT environment variable for Railway/cloud deployments, default to 5001 for local
+    port = int(os.environ.get('PORT', 5001))
+    debug = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+    app.run(host='0.0.0.0', port=port, debug=debug)

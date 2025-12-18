@@ -1,0 +1,45 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model files (too large)
+models/**/*.pb
+models/**/*.tar.gz
+models/**/*.ckpt*
+models/**/saved_model/
+*.pt
+*.pkl
+
+# Firebase credentials (should be set as env var in Railway)
+firebase-credentials.json
+
+# Test files
+test*.py
+*_test.py
+
+# Documentation
+*.md
+!README.md
+
