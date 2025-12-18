@@ -1,0 +1,22 @@
+[
+  {
+    "animal_type": "cat",
+    "confidence": 0.2690568268299103,
+    "bounding_box": {
+      "left": 2586476,
+      "top": 5160846,
+      "right": 6669064,
+      "bottom": 9895082,
+      "width": 4082588,
+      "height": 4734236
+    },
+    "center_point": {
+      "x": 1530,
+      "y": 1867
+    },
+    "region_size": {
+      "width": 0,
+      "height": 0
+    }
+  }
+]

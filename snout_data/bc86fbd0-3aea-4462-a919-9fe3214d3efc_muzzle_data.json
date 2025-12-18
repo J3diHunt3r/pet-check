@@ -1,0 +1,22 @@
+[
+  {
+    "animal_type": "bear",
+    "confidence": 0.3349619507789612,
+    "bounding_box": {
+      "left": 565192,
+      "top": 4371284,
+      "right": 9061672,
+      "bottom": 15006722,
+      "width": 8496480,
+      "height": 10635438
+    },
+    "center_point": {
+      "x": 1591,
+      "y": 2403
+    },
+    "region_size": {
+      "width": 0,
+      "height": 0
+    }
+  }
+]
