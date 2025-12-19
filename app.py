@@ -2322,6 +2322,11 @@ def process_image(file_path):
         return None
 
 
+@app.route('/', methods=['GET'])
+def health_check():
+    """Health check endpoint for Fly.io and other platforms"""
+    return jsonify({"status": "ok", "message": "Pet Check API is running"}), 200
+
 @app.route('/scanFace', methods=['POST'])
 def scan_face():
     try:
@@ -3071,7 +3076,13 @@ def debug_dogfacenet_preservation(animal_data, stage="unknown"):
 
 
 if __name__ == '__main__':
-    # Use PORT environment variable for Railway/cloud deployments, default to 5001 for local
+    # Use PORT environment variable for cloud deployments (Fly.io, Railway, etc.)
+    # Fly.io sets PORT automatically, default to 5001 for local development
     port = int(os.environ.get('PORT', 5001))
     debug = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+    
+    # Log the port being used for debugging
+    print(f"🚀 Starting Flask app on 0.0.0.0:{port}")
+    print(f"📡 PORT environment variable: {os.environ.get('PORT', 'not set (using default 5001)')}")
+    
     app.run(host='0.0.0.0', port=port, debug=debug)
